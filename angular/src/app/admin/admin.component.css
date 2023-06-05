@@ -1,0 +1,15 @@
+.card{
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-right: 200px;
+}
+.login:hover{
+    transform: translatey(-23px);
+    box-shadow: 5px 5px rgb(194, 187, 187) inset ;
+}
+.login{
+    margin:50px;
+    border: 1px solid rgb(211, 208, 208);
+    border-radius: 20px;
+    padding: 50px;
+}
