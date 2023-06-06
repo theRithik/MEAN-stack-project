@@ -1,0 +1,39 @@
+<div class="card" >
+    <div class="card-header">
+        <h4 style="text-align: center;">Student Login</h4>
+    </div>
+    <form (ngSubmit)="onSubmit(wForm)" #wForm="ngForm">
+   
+    <div class="login">
+    <label  class="form-label">Register number</label>
+    <input type="text" class="form-control" name="register" ngModel required #number="ngModel">
+    <div *ngIf="number.invalid && number.touched">
+        <span> Register number is required</span>
+    </div>
+    <label class="form-label">password</label>
+    <input type="password" name="password" class="form-control" style="margin-bottom: 30px;" ngModel required>
+    <button type="submit" class="btn btn-primary" [disabled]="!wForm.valid">Login</button>
+    <button type="button" class="btn btn-danger" style="margin-left: 30px;" (click)="openPopup()">Change Password</button>
+
+</div>
+</form>
+</div>
+
+<div class="container" style=" height: 500px; backdrop-filter: blur(10px);  position: absolute; top: 100px; left: 100px; z-index: 1; display: none;" [ngStyle]="{'display':displayStyle}">
+<div class="card" style="width: 700px;">
+    <div class="card-header"><h5 style="text-align: center; color: blue;">change password</h5></div>
+    <form (ngSubmit)="changeSubmit(mForm)" #mForm="ngForm">
+    <div class="card-body">
+        <h6 style="color: red;">{{wrongPass}}</h6>
+        <label class="form-label"><h6>Register number</h6></label>
+        <input type="text" class="form-control" name="register" ngModel>
+        <label class="form-label"><h6>password</h6></label>
+        <input type="password" class="form-control" name="password" ngModel>
+        <label  class="form-label"><h6>confirm password</h6></label>
+        <input type="password" class="form-control" name="confirm" ngModel>
+        
+        <button type="submit" class="btn btn-danger" style="margin-top: 20px;" > change</button>
+    </div>
+</form>
+</div>
+</div>
