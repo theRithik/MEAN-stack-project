@@ -1,0 +1,48 @@
+
+<div class="container" style="margin-top:50px">
+    <div class="card">
+        <div class="card-header">
+            <h5>Edit Details</h5>
+        </div>
+        <div class="card-body">
+            <label class="form-label">Name</label>
+            <input class="form-control" id="first" type="text" name="name" value={{details?.name}} style="margin-bottom: 10px;">
+            <label class="form-label">Register</label>
+            <input class="form-control" type="text" name="register" value={{details?.register}} style="margin-bottom: 10px;">
+            <label class="form-label">Phone Numbr</label>
+            <input class="form-control" id="secound" type="text" name="phone" value={{details?.phone}} style="margin-bottom: 10px;">
+            <label class="form-label">email</label>
+            <input class="form-control" id="third" type="email" name="email" value={{details?.email}} style="margin-bottom: 10px;">
+        <button class="btn btn-primary" (click)="addDetails()">edit Details</button>
+        </div>
+    </div>
+</div>
+<div class="container" *ngFor="let faculity of faculty">
+   <h6 style="color: red;"> {{faculity.faculity}}</h6>
+</div>
+<div class="container" style="margin-top: 50px;">
+    <div class="card">
+        <div class="card-header">
+            <h5>Notifications</h5>
+        </div>
+        <div class="card-body">
+          <ul *ngFor="let notification of notifications" >
+            <li >{{notification.notification}}</li>
+          </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 50px;">
+<div class="card">
+    <div class="card-header">
+        <h5>Exam Pass</h5>
+    </div>
+    <div class="card-body">
+        <ul *ngFor="let exampass of exampasss">
+        <li>{{exampass.exampass}}</li>
+        </ul>
+    </div>
+</div>
+</div>
+
